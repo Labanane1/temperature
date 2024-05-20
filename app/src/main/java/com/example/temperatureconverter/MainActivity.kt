@@ -16,6 +16,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.setValue
 
+//création des fonctions
 @Composable
 fun TemperatureConverter() {
     var input by remember { mutableStateOf("") }
@@ -26,7 +27,7 @@ fun TemperatureConverter() {
             onValueChange = { input = it },
             label = { Text("Température en Celsius") },
             keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Number)
-        )
+        )g
         Button(onClick = {
             val celsius = input.toFloatOrNull()
             if (celsius != null) {
@@ -39,7 +40,7 @@ fun TemperatureConverter() {
         Text(text = "Température en Fahrenheit: $output")
     }
 }
-
+// prévisualisation
 @Preview
 @Composable
 fun PreviewTemperatureConverter() {
